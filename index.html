@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>CSE 134b HW2 HTML Portfolio</title>
+    <title>CSE 134b HW3 HTML Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="keywords" content="HTML"/>
     <meta name="author" content="Jeffrey Luu"/>
-    <link href="assets/favicon.ico" rel="icon"/>
+    <link href="assets/images/favicon.ico" rel="icon"/>
     <style>
         nav {
             border: 1px solid black;
@@ -18,15 +18,15 @@
 
 <body>
     <header>
-        <img src="assets/fractal.png" alt="A Mandelbrot fractal" width="200" height="200"/> 
+        <img src="assets/images/fractal.png" alt="A Mandelbrot fractal" width="200" height="200"/> 
         <h1><i>Jeffrey Luu's Website</i></h1>
         <nav id = topNavigation>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#labs">Labs</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/work.html">Work</a></li>
+                <li><a href="pages/labs.html">Labs</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
                 <li><button id="themeButton">Theme Change</button></li>
             </ul>
         </nav>
@@ -47,17 +47,18 @@
         
         <section>
             <h2 id="work">Work</h2>
-            <img src="assets/ub.png" alt="UrBenefit, an accessible platform and social application oriented around crowdsourcing possible volunteers of humanitarian and art-based community efforts" width="200" height="200"/>
-            <img src="assets/code.png" alt="Placeholder Image that says Project" width="200" height="200"/>
-            <img src="assets/code.png" alt="Placeholder Image that says Project" width="200" height="200"/>
-            <img src="assets/code.png" alt="Placeholder Image that says Project" width="200" height="200"/>
-            <img src="assets/code.png" alt="Placeholder Image that says Project" width="200" height="200"/>
-            <img src="assets/code.png" alt="Placeholder Image that says Project" width="200" height="200"/>
+            <img src="assets/images/ub.png" alt="UrBenefit, an accessible platform and social application oriented around crowdsourcing possible volunteers of humanitarian and art-based community efforts" width="200" height="200"/>
+            <img src="assets/images/code.png" alt="Placeholder Image that says Project" width="200" height="200"/>
+            <img src="assets/images/code.png" alt="Placeholder Image that says Project" width="200" height="200"/>
+            <img src="assets/images/code.png" alt="Placeholder Image that says Project" width="200" height="200"/>
+            <img src="assets/images/code.png" alt="Placeholder Image that says Project" width="200" height="200"/>
+            <img src="assets/images/code.png" alt="Placeholder Image that says Project" width="200" height="200"/>
         </section>
 
     </main>
 
-    <h2 id="labs">Labs</h2>
+    <!-- MOVED TO labs.html-->
+    <!-- <h2 id="labs">Labs</h2>
     <pre>     
                   @..@
                  (\--/)
@@ -70,11 +71,10 @@ https://asciiart.website/index.php?art=animals/frogs
     </pre>
 
     <picture>
-        <source srcset="assets/ms-icon-310x310.png" media="(orientation: portrait)"/>
-        <img src="assets/ms-icon-150x150.png" alt="Iconic Fire Emblem Swords"/>
+        <source srcset="assets/images/ms-icon-310x310.png" media="(orientation: portrait)"/>
+        <img src="assets/images/ms-icon-150x150.png" alt="Iconic Fire Emblem Swords"/>
     </picture>
 
-    <!--TODO: Find out why picture doesn't auto line break-->
     <div>
         <br><br />
     </div>
@@ -94,13 +94,13 @@ https://asciiart.website/index.php?art=animals/frogs
         <figcaption>Listen to the rain and thunder:</figcaption>
         <audio
             controls
-            src="/assets/rainthunder.mp3">
+            src="/assets/media/rainthunder.mp3">
         </audio>
     </figure>
 
     <h3>Cool Cat Facts Video Below!</h3>
     <video controls width="300">
-        <source src="assets/cutecat.mp4">
+        <source src="assets/media/cutecat.mp4">
     </video>
 
 
@@ -214,9 +214,10 @@ https://asciiart.website/index.php?art=animals/frogs
             <slot name="product-description">Product Description 2</slot>
           </div>
         </template>
-    </div>
+    </div> -->
 
-    <h2 id="contact">Contact</h2>
+    <!-- MOVED TO index.html-->
+    <!-- <h2 id="contact">Contact</h2>
 
     <form action="mailto:" method="post" enctype="text/plain">
         <label for="name">Name:</label>
@@ -229,7 +230,7 @@ https://asciiart.website/index.php?art=animals/frogs
         <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
 
         <input type="submit" value="Submit">
-    </form>
+    </form> -->
 
     <footer>
         <hr/>
