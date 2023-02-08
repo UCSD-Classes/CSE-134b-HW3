@@ -83,25 +83,25 @@
     </header>
 
     <main>
-        <section>
+        <section id = "homeSection">
             <h2 id="home">Home</h2>
             <img id="fractal" src="assets/images/fractal.png" alt="A Mandelbrot fractal" width="200" height="200"/> 
             <p id="intro" id>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus iure ab consequuntur?<br/> Beatae iusto itaque nobis ipsum, debitis est animi pariatur quis!<br/> Consequatur similique a omnis nostrum dignissimos corporis illum.</p>
             <aside><p>P.S. This is <span style="color:blue">Latin!</span></p></aside>
         </section>
         
-        <section>
+        <section id = "aboutSection">
             <h2 id="about">About</h2>
             <p><strong>The text here tells you about <em>me!</em></strong></p>
             <p>The first line of code I wrote was <code>System.out.println("Hello World")</code>!</p>
         </section>
         
         <section>
-            <h2 id="work">Work</h2>
+            <h2 id="workSection">Work</h2>
             <p>
                 <strong>Check of some of my most recent work!</strong>
             </p>
-            <div id = "WorkContainer">
+            <section id = "WorkContainer">
                 <!-- Create images that are links to work1, work2, work3, etc.-->
                 <a href="pages/projects/work1.html"><img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/></a>
                 <a href="pages/projects/work2.html"><img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/></a>
@@ -117,20 +117,24 @@
 
     <a href="pages/labs.html">Labs</a>
 
-    <h2 id="contact">Contact</h2>
+    
+    <section id="contactSection">
+        <h2 id="contact">Contact</h2>
+        <form id="contactForm" action="mailto:" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name..">
 
-    <form id="contactForm" action="mailto:" method="post" enctype="text/plain">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your name..">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email..">
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Your email..">
+            <label for="subject">Subject:</label>
+            <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
 
-        <label for="subject">Subject:</label>
-        <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
 
-        <input type="submit" value="Submit">
-    </form>
+    
 
     <footer>
         <hr/>
