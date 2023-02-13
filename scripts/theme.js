@@ -1,4 +1,6 @@
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+
+// Track the theme switch button 
 
 function switchTheme(e) {
     if (e.target.checked) {
