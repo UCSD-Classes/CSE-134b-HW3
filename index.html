@@ -15,11 +15,6 @@
 
     <!-- Home Section Style-->
     <style>
-        #home {
-            text-align: left;
-            text-decoration: underline;
-        }
-
         #homeCols {
             display: flex;
             flex-direction: column;
@@ -112,24 +107,15 @@
     <style>
         #aboutSection {
             border: 1px solid black;
-
-        }
-
-        #about {
-            border: 1px solid black;
-            text-decoration: underline;
-
         }
     </style>
 
     <!-- Work Section Style-->
     <style>
-        #workSection {
-
-        }
-        #work {
-            border: 1px solid black;
-            text-decoration: underline;
+        #workSection p {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            font-size: 1.5rem;
         }
         #WorkContainer {
             max-width: 62.5rem;
@@ -143,30 +129,78 @@
             border: 1px solid black;
         }
         #WorkContainer:hover {
-
+            opacity: 1;
         }
         
     </style>
 
     <!-- Contact Form Style -->
     <style>
-        #contact {
-            text-decoration: underline;
-        }
         #contactForm {
             margin: 2rem;
+            text-align: center;
+            background: #fff;
+            border-radius: 5px;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4); 
+        }
+
+        #formTitle {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            color: var(--font-color);
         }
         #contactForm label {
             display: block;
-            margin: 0.5rem;
+            margin: 1rem;
+            text-align: left;
         }
         #contactForm input {
             display: block;
-            margin: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
+            width: 25rem;
+        }
+        #contactForm input:hover {
+            border-bottom: 0.3125rem solid #0e3721;
+            height: 2rem;
+            transition: ease 0.5s;
         }
         #contactForm textarea {
             display: block;
-            margin: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
+            width: 25rem;
+            height: 10rem;
+        }
+
+        #contactForm button {
+            min-width: 12rem;
+            height: 3rem;
+            border-radius: 1.5rem;
+            background: #57b846;
+            font-weight: bold;
+            line-height: 1.5;
+            color: #fff;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: ;
+            -webkit-transition: all .4s;
+            -o-transition: all .4s;
+            -moz-transition: all .4s;
+            transition: all .4s;
         }
     </style>
 
@@ -184,9 +218,9 @@
                 <li><a href="#contact">Contact</a></li>
                 <li>
                     <div class="theme-switch-wrapper">
-                        <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                            <div class="slider round"></div>
+                        <label class="theme-switch" for="checkbox" >
+                            <input type="checkbox" id="checkbox" />
+                                <div class="slider round"></div>
                         </label>
                     </div>
                     <!-- TODO COMMENT JS AFTER-->
@@ -217,13 +251,28 @@
                         <img id="fractalImg" src="assets/images/fractal.png" alt="A Mandelbrot fractal" width="200" height="200"/>
                         <figcaption id="fractalDesc">Mandeltbrot fractal made in computer graphics!</figcaption>
                     </figure>
+                    <figure id="me">
+                        <img id="code" src="assets/images/Placeholder.png" alt="A picture of me!" width="200" height="200"/>
+                        <figcaption id="meDesc">Placeholder!</figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
         
         <section id = "aboutSection">
             <h2 id="about">About</h2>
-            <p><strong>The text here tells you about <em>me!</em></strong></p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci doloribus porro quam doloremque maiores? Sunt tenetur, pariatur laboriosam labore ratione iste veritatis quam facilis expedita quod, perferendis qui voluptatibus soluta.</p>
+            <section id = "Experience">
+                <h3>Experience</h3>
+                <p>
+                    <strong>Check out some of my experience!</strong>
+                </p>
+                <ul>
+                    <li>UCSD Computer Science Club</li>
+                    <li>UCSD Computer Science Club</li>
+                    <li>UCSD Computer Science Club</li>
+                </ul>
+            </section>
             <p>The first line of code I wrote was <code>System.out.println("Hello World")</code>!</p>
         </section>
         
@@ -252,22 +301,26 @@
     <section id="contactSection">
         <h2 id="contact">Contact</h2>
         <form id="contactForm" action="mailto:" method="post" enctype="text/plain" required="">
+            <span id = "formTitle">Get in Touch!</span>
+
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your name..">
+            <input type="text" id="name" name="name" required placeholder="Your name..">
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your email..">
+            <input type="email" id="email" name="email" required placeholder="Your email..">
 
-            <label for="subject">Subject:</label>
-            <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+            <label for="email">Subject:</label>
+            <input type="subject" id="subject" name="subject" required placeholder="Subject..">
 
-            <input type="submit" value="Submit">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required placeholder="Write something.."></textarea>
+
+            <button type="submit"><span>Send Email!</span></button>
         </form>
     </section>
 
-    
-
     <footer>
+        <hr>
         <section>
             <ul>
                 <li><a href="mailto:jluuruncs@gmail.com">Email</a></li>

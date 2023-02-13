@@ -10,7 +10,7 @@
 }
 
 
-
+/* Dark Mode */
 [data-theme="dark"] {
     /* --primary-color: #0a192f; */
     --secondary-color: #c7d2fe;
@@ -33,6 +33,9 @@ h1 {
     font-size: 2.5rem;
     font-family: 'Maison Neue', sans-serif;
     color: var(--secondary-color);
+    margin-left: 0.625rem;
+    margin-top: 0.25rem;
+    float: left;
 }
 
 main {
@@ -40,8 +43,15 @@ main {
 }
 
 h2 {
+  /* TODO Fix padding */
     font-size: 2rem;
-    /* TODO Fix padding */
+    text-decoration: underline;
+    
+}
+
+section {
+  /* TODO Fix margin left, especially in experience section */
+    margin-left: 0.625rem;
 }
 
 
@@ -51,9 +61,6 @@ h2 {
 
 
 /* Top navbar css is reused across all pages. */
-#topNavigation {
-    border: 1px solid black;
-}
 #topNavigation ul {
     list-style: none;
     display: flex;
@@ -72,9 +79,9 @@ h2 {
   }
   .theme-switch {
     display: inline-block;
-    height: 34px;
+    height: 2.125rem;
     position: relative;
-    width: 60px;
+    width: 3.75rem;
   }
   
   .theme-switch input {
@@ -94,13 +101,13 @@ h2 {
   
   .slider:before {
     background-color: #fff;
-    bottom: 4px;
+    bottom: 0.25rem;
     content: "";
-    height: 26px;
-    left: 4px;
+    height: 1.625rem;
+    left: 0.25rem;
     position: absolute;
     transition: .4s;
-    width: 26px;
+    width: 1.625rem;
   }
   
   input:checked + .slider {
@@ -108,14 +115,15 @@ h2 {
   }
   
   input:checked + .slider:before {
-    transform: translateX(26px);
+    transform: translateX(1.625rem);
   }
   
   .slider.round {
-    border-radius: 34px;
+    border-radius: 2.125rem;
   }
   
   .slider.round:before {
+    /* TODO convert units?? */
     border-radius: 50%;
   }
 
@@ -135,7 +143,7 @@ footer ul {
     margin-top: 0.5rem;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 480px) {
     footer:ul {
       grid-auto-flow: column;
     }
