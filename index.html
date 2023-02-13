@@ -118,21 +118,49 @@
             padding-bottom: 1.5rem;
             font-size: 1.5rem;
         }
-        #WorkContainer {
-            max-width: 62.5rem;
-            border: 1px solid black;
-            background-color: #0a192f;
-            padding: 4rem;
+        #workContainer {
+            max-width: 66rem;
+            padding: 2rem;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
             grid-gap: 2rem;
-            border: 1px solid black;
         }
-        #WorkContainer:hover {
+
+        .background {
+            background-color: #fff;
+            border: 5px solid black
+        }
+
+        .projectContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 20rem;
+            min-height: 15rem;
+            border: 3px solid red;
+
+        }
+
+        .projectTitle {
+            border: 3px solid blue;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .moreInfo {
+            border: 3px solid green;
+            text-align: center;
+            opacity: 0;
+        }
+
+        .moreInfo:hover {
             opacity: 1;
+            margin-left: auto;
+            margin-right: auto;
         }
-        
+
     </style>
 
     <!-- Contact Form Style -->
@@ -219,10 +247,10 @@
                 <li><a href="#contact">Contact</a></li>
                 <li>
                     <section class="theme-switch-wrapper">
-                        <label class="theme-switch" for="checkbox" >
-                            <input type="checkbox" id="checkbox" />
-                                <div class="slider round"></div>
-                        </label>
+                        <label class="switch" aria-label="Toggle Switch"> 
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
                     </section>
                     <!-- TODO COMMENT JS AFTER-->
                     <script src="scripts/theme.js"></script>
@@ -232,7 +260,7 @@
     </header>
 
     <main>
-        <section id = "homeSection">
+        <section class = "contentSection">
             <h2 id="home">Home</h2>
             <div id="homeCols">
                 <div id="homeRows">
@@ -260,46 +288,115 @@
             </div>
         </section>
         
-        <section id = "aboutSection">
+        <section class = "contentSection">
             <h2 id="about">About</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci doloribus porro quam doloremque maiores? Sunt tenetur, pariatur laboriosam labore ratione iste veritatis quam facilis expedita quod, perferendis qui voluptatibus soluta.</p>
+            <p>The first line of code I wrote was <code>System.out.println("Hello World")</code>!</p>
             <section id = "Experience">
                 <h3>Experience</h3>
-                <p>
-                    <strong>Check out some of my experience!</strong>
-                </p>
-                <ul>
-                    <li>UCSD Computer Science Club</li>
-                    <li>UCSD Computer Science Club</li>
-                    <li>UCSD Computer Science Club</li>
-                </ul>
             </section>
-            <p>The first line of code I wrote was <code>System.out.println("Hello World")</code>!</p>
         </section>
         
-        <section id = "workSection">
+        <section class = "contentSection">
             <h2 id="work">Work</h2>
             <p>
                 <strong>Check of some of my most recent work!</strong>
             </p>
-            <section id = "WorkContainer">
-                <!-- Create images that are links to work1, work2, work3, etc.-->
-                <a href="pages/projects/work1.html"><img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/></a>
-                <a href="pages/projects/work2.html"><img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/></a>
-                <a href="pages/projects/work3.html"><img src="assets/images/projects/ub.png" alt="A placeholder image" width="200" height="200"/></a>
-                <a href="pages/projects/work4.html"><img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/></a>
-                <a href="pages/projects/work5.html"><img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/></a>
-                <a href="pages/projects/work6.html"><img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/></a>
-            </section>
-            
+            <div id = "workContainer">
+                <div class = "background">
+                    <div class = "projectContainer">
+                        <div class = "moreInfo">
+                            <span class = "projectTitle">
+                                Project 1
+                            </span>
+                            <p class = "projDesc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Quisquam, quae.
+                            </p>
+                            <!-- <img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/> -->
+                            <button class = "learnMore" onclick="window.location.href='pages/projects/work1.html';">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class = "background">
+                    <div class = "projectContainer">
+                        <div class = "moreInfo">
+                            <span class = "projectTitle">
+                                Project 2
+                            </span>
+                            <p class = "projDesc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Quisquam, quae.
+                            </p>
+                            <!-- <img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/> -->
+                            <button class = "learnMore" onclick="window.location.href='pages/projects/work2.html';">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class = "background">
+                    <div class = "projectContainer">
+                        <div class = "moreInfo">
+                            <span class = "projectTitle">
+                                UrBenefit
+                            </span>
+                            <p class = "projDesc">
+                                An accessible platform/social application for crowdsourcing volunteers for humanitarian and art-based community efforts.
+                            </p>
+                            <!-- <img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/> -->
+                            <button class = "learnMore" onclick="window.location.href='pages/projects/work3.html';">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class = "background">
+                    <div class = "projectContainer">
+                        <div class = "moreInfo">
+                            <span class = "projectTitle">
+                                Project 4
+                            </span>
+                            <p class = "projDesc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Quisquam, quae.
+                            </p>
+                            <!-- <img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/> -->
+                            <button class = "learnMore" onclick="window.location.href='pages/projects/work4.html';">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class = "background">
+                    <div class = "projectContainer">
+                        <div class = "moreInfo">
+                            <span class = "projectTitle">
+                                Project 5
+                            </span>
+                            <p class = "projDesc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Quisquam, quae.
+                            </p>
+                            <!-- <img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/> -->
+                            <button class = "learnMore" onclick="window.location.href='pages/projects/work5.html';">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class = "background">
+                    <div class = "projectContainer">
+                        <div class = "moreInfo">
+                            <span class = "projectTitle">
+                                Project 6
+                            </span>
+                            <p class = "projDesc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Quisquam, quae.
+                            </p>
+                            <!-- <img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/> -->
+                            <button class = "learnMore" onclick="window.location.href='pages/projects/work6.html';">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>     
         </section>
-
     </main>
-
-    <a href="pages/labs.html">Labs</a>
-
     
-    <section id="contactSection">
+    <section class="contentSection">
         <h2 id="contact">Contact</h2>
         <form id="contactForm" action="mailto:" method="post" enctype="text/plain" required="">
             <span id = "formTitle">Get in Touch!</span>
