@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css" rel="stylesheet" >
     <link href="styles/main.css" rel="stylesheet"/>
 
     <!-- Home Section Style-->
@@ -259,7 +260,7 @@
 <body>
     <header>
         <h1>Jeffrey Luu</h1>
-        <nav id = topNavigation>
+        <nav id = "topNavigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -267,14 +268,14 @@
                 <li><a href="pages/labs.html">Labs</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <section class="theme-switch-wrapper">
+                    <section class="themeSwitchWrapper">
                         <label class="switch" aria-label="Toggle Switch"> 
                             <input type="checkbox">
                             <span class="slider round"></span>
                           </label>
                     </section>
                     <!-- TODO COMMENT JS AFTER-->
-                    <script src="scripts/theme.js"></script>
+                    <script async src="scripts/theme.js"></script>
                 </li>
             </ul>
         </nav>
@@ -298,7 +299,7 @@
                         </section>
                     </figure>
                     <figure id="me">
-                        <img id="code" src="assets/images/portfolioPic.png" alt="A headshot of me!"/>
+                        <img id="code" src="assets/images/portfolioPic.webp" alt="A headshot of me!"/>
                         <figcaption class="imgDesc">A picture of me!</figcaption>
                     </figure>
                     <figure id="fractal">
@@ -332,7 +333,6 @@
                             </span>
                             <p class = "projDesc">
                                 ZooSeeker is an Android application that allows for users to plan out a day at the San Diego Zoo, complete with an optimized path through their selected exhibits.
-
                             </p>
                             <!-- <img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/> -->
                             <button class = "learnMore" onclick="window.location.href='pages/projects/work1.html';">Learn More</button>
