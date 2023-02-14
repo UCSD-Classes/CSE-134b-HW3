@@ -1,3 +1,5 @@
+/* TODO Come up with primary color and secondary color */
+
 /* Light Mode */
 :root {
     /* --primary-color: #F5E6D0; */
@@ -11,8 +13,6 @@
 
     
 }
-
-/* TODO Come up with primary color and secondary color */
 
 /* Dark Mode */
 [data-theme="dark"] {
@@ -63,21 +63,69 @@ h2 {
 /* Top navbar css is reused across all pages. */
 #topNavigation ul {
     list-style: none;
-    display: flex;
+    display: none;
     grid-gap: 0.5rem;
-    justify-content: flex-end;
 }
+
+/* Create a medai query to show the top navigation when the screen is larger than 768px */
+@media screen and (min-width: 768px) {
+    #topNavigation ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
 #topNavigation ul li {
     display: inline-block;
     padding: 0.5rem;
-    border: 2px solid black;
+    border: 2px solid var(--bg-color);
     border-radius: 0.5rem;
 }
 
 #topNavigation ul li a {
-    text-decoration: underline;
-    color: var(--link-color);
-    box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+    text-decoration: none;
+    color: var(--font-color);
+    background-color: blue;
+    font-style: bold;
+    padding: 10px 15px;
+    border-radius: 75px;
+}
+
+#hMenu {
+  z-index: 10;
+}
+
+/* Create a media query to hide the hamburger menu when the screen is larger than 768px */
+@media screen and (min-width: 768px) {
+    #hMenu {
+        display: none;
+    }
+}
+
+/* By default, hide the hamburger menu */
+#hMenu ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Create a media query to show the hamburger menu when the screen is smaller than 768px */
+@media screen and (max-width: 768px) {
+    #hMenu ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Style the hamburger menu */
+#hMenu ul li {
+  padding: 6px 0;
+  font-size: 3rem;
 }
 
 /*Simple css to style it like a toggle switch*/
