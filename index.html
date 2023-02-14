@@ -128,8 +128,7 @@
         }
 
         .background {
-            background-color: #fff;
-            border: 5px solid black
+            background-color: var(--heading-color);
         }
 
         .projectContainer {
@@ -153,12 +152,34 @@
             border: 3px solid green;
             text-align: center;
             opacity: 0;
+            color: var(--inverse-font-color);
         }
 
         .moreInfo:hover {
             opacity: 1;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .learnMore {
+            font-size:15px;
+            font-family:Trebuchet MS;
+            width:140px;
+            height:50px;
+            border-width:2px;
+            color:#505739;
+            border-color:#333029;
+            border-top-left-radius:15px;
+            border-top-right-radius:15px;
+            border-bottom-left-radius:15px;
+            border-bottom-right-radius:15px;
+            box-shadow: 0px 1px 0px 0px #1c1b18;
+            text-shadow: 0px 1px 0px #ffffff;
+            background:linear-gradient(#eae0c2, #ccc2a6);
+        }
+
+        .learnMore:hover {
+            background:linear-gradient(#ccc2a6, #eae0c2);
         }
 
     </style>
@@ -169,6 +190,7 @@
             margin: 2rem;
             text-align: center;
             background: #fff;
+            color: black;
             border-radius: 5px;
             max-width: 480px;
             margin-left: auto;
@@ -182,7 +204,6 @@
             font-size: 1.5rem;
             font-weight: bold;
             text-align: center;
-            color: var(--font-color);
         }
         #contactForm label {
             display: block;
@@ -307,11 +328,11 @@
                     <div class = "projectContainer">
                         <div class = "moreInfo">
                             <span class = "projectTitle">
-                                Project 1
+                                ZooSeeker
                             </span>
                             <p class = "projDesc">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quisquam, quae.
+                                ZooSeeker is an Android application that allows for users to plan out a day at the San Diego Zoo, complete with an optimized path through their selected exhibits.
+
                             </p>
                             <!-- <img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/> -->
                             <button class = "learnMore" onclick="window.location.href='pages/projects/work1.html';">Learn More</button>
@@ -322,11 +343,10 @@
                     <div class = "projectContainer">
                         <div class = "moreInfo">
                             <span class = "projectTitle">
-                                Project 2
+                                Learning From Health
                             </span>
                             <p class = "projDesc">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quisquam, quae.
+                                Learning from Health is a data science project, utilizing data from the CDC to create predictive models for income based on statistics on health conditions like diabetes, cholesterol, kidney disease, etc.
                             </p>
                             <!-- <img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/> -->
                             <button class = "learnMore" onclick="window.location.href='pages/projects/work2.html';">Learn More</button>
@@ -351,7 +371,7 @@
                     <div class = "projectContainer">
                         <div class = "moreInfo">
                             <span class = "projectTitle">
-                                Project 4
+                                BlackJack
                             </span>
                             <p class = "projDesc">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -366,7 +386,7 @@
                     <div class = "projectContainer">
                         <div class = "moreInfo">
                             <span class = "projectTitle">
-                                Project 5
+                                SimpleTweet
                             </span>
                             <p class = "projDesc">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
