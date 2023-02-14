@@ -23,13 +23,11 @@
             height: screen;
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
-            padding-left: 3rem;
         }
 
         #homeRows {
             display: flex;
             flex-direction: row;
-            justify-content: left;
             height: screen;
             margin-left: 6rem;
             margin-right: auto;
@@ -37,8 +35,25 @@
             align-items: center; 
         }
 
+        /* If the screen is 768px or less, remove the margin-left and make the grid 1 column */
+        @media screen and (max-width: 768px) {
+            #homeRows {
+                margin-left: 0;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
         #intro {
             margin-bottom: 6rem;
+            border: 3px solid red;
+        }
+
+        @media screen and (max-width: 768px) {
+            #intro {
+                margin-bottom: 0;
+            }
         }
 
         #introDesc {
@@ -83,12 +98,17 @@
             text-decoration: none;
         }
 
+        #me {
+            border: 3px solid green;
+        }
+
         #fractal {
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: 45vh;
             height: 45vh;
+            border: 3px solid blue;
         }
 
         #fractalImg {
@@ -104,6 +124,7 @@
             color: var(--font-color);
         }
     </style>
+    
 
     <!-- About Section Style-->
     <style>
@@ -128,6 +149,16 @@
             grid-gap: 2rem;
         }
 
+        /* If the screen is 768px or less, make the grid 1 column and reduce the margin-left */
+        @media screen and (max-width: 768px) {
+            #workContainer {
+                justify-content: center;
+                align-items: center;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 1fr);
+            }
+        }
+
         .background {
             background-color: var(--heading-color);
         }
@@ -140,7 +171,13 @@
             min-width: 20rem;
             min-height: 15rem;
             border: 3px solid red;
+        }
 
+        /* If the screen is 768px or less, lower the min-width */
+        @media screen and (max-width: 768px) {
+            .projectContainer {
+                min-width: 15rem;
+            }
         }
 
         .projectTitle {
@@ -255,13 +292,37 @@
         }
     </style>
 
+    <style>
+        /* Hide the checkbox */
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        /* Style the menu icon */
+        .menu-icon {
+            display: block;
+            cursor: pointer;
+        }
+
+        /* Style the menu */
+        .menu {
+            display: none;
+            list-style: none;
+        }
+
+        /* Show the menu when the checkbox is checked */
+        input[type="checkbox"]:checked ~ .menu {
+            display: block;
+        }
+    </style>
+
 </head>
 
 <body>
     <header>
         <h1>Jeffrey Luu</h1>
         <nav id = "topNavigation">
-            <ul>
+            <ul id = navBarMenu>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
@@ -278,6 +339,10 @@
                     <script async src="scripts/theme.js"></script>
                 </li>
             </ul>
+
+            <div class = "navbarToggle">
+                <div class = "hamburgerMenu"></div>
+            </div>
         </nav>
     </header>
 

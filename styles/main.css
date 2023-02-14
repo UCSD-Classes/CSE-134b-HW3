@@ -10,8 +10,6 @@
     --bg-color: #F5E6D0;
     --heading-color: black;
     --link-color: #0000FF;
-
-    
 }
 
 /* Dark Mode */
@@ -24,7 +22,6 @@
     --bg-color: #0a192f;
     --heading-color: white;
     --link-color: #0000FF;
-    
 }
 
 body {
@@ -33,10 +30,11 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-main {
-  
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.8rem;
+  }
 }
-
 
 h1 {
     font-weight: bold;
@@ -44,88 +42,80 @@ h1 {
     font-family: 'Maison Neue', sans-serif;
     color: var(--secondary-color);
     margin-left: 0.625rem;
-    margin-top: 0.25rem;
+    margin-top: 1rem;
     float: left;
 }
 
+/* If screen is smaller than 768 px, shrink the h1 font size and remove the margins */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    margin-left: 0;
+    margin-top: 0;
+    float: none;
+  }
+}
+  
 h2 {
     font-size: 2rem;
     text-decoration: underline;
     color: var(--heading-color);
-    
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
 }
 
 .contentSection {
-  /* TODO fix weird behavior with home h2 margin-left */
   margin-left: 0.625rem;
 }
 
-/* Top navbar css is reused across all pages. */
-#topNavigation ul {
-    list-style: none;
-    display: none;
-    grid-gap: 0.5rem;
+@media screen and (max-width: 768px) {
+  .contentSection {
+    margin-left: 0;
+  }
 }
 
-/* Create a medai query to show the top navigation when the screen is larger than 768px */
-@media screen and (min-width: 768px) {
-    #topNavigation ul {
-        display: flex;
-        justify-content: flex-end;
-    }
+/* Top navbar css is reused across all pages. */
+#topNavigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+/* TODO Replace with a hamburger menu for mobile for HW4 */
+@media screen and (max-width: 768px) {
+  #topNavigation {
+    display: none;
+  }
+}
+
+#navBarMenu {
+  display: flex;
+  list-style: none;
 }
 
 #topNavigation ul li {
-    display: inline-block;
-    padding: 0.5rem;
-    border: 2px solid var(--bg-color);
-    border-radius: 0.5rem;
+  margin-right: 20px;
+  border: 2px solid var(--bg-color);
+  border-radius: 0.5rem;
+}
+
+#topNavigation ul li :last-child {
+  margin-right: 0;
 }
 
 #topNavigation ul li a {
-    text-decoration: none;
-    color: var(--font-color);
-    background-color: blue;
-    font-style: bold;
-    padding: 10px 15px;
-    border-radius: 75px;
-}
-
-#hMenu {
-  z-index: 10;
-}
-
-/* Create a media query to hide the hamburger menu when the screen is larger than 768px */
-@media screen and (min-width: 768px) {
-    #hMenu {
-        display: none;
-    }
-}
-
-/* By default, hide the hamburger menu */
-#hMenu ul {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-}
-
-/* Create a media query to show the hamburger menu when the screen is smaller than 768px */
-@media screen and (max-width: 768px) {
-    #hMenu ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-/* Style the hamburger menu */
-#hMenu ul li {
-  padding: 6px 0;
-  font-size: 3rem;
+  text-decoration: none;
+  color: var(--font-color);
+  background-color: lightskyblue;
+  font-style: bold;
+  font-size: 1.25rem;
+  padding: 10px 15px;
+  border-radius: 75px;
 }
 
 /*Simple css to style it like a toggle switch*/
@@ -209,7 +199,7 @@ footer ul {
     margin-top: 0.5rem;
 }
 
-@media (min-width: 480px) {
+@media screen and (min-width: 480px) {
     footer:ul {
       grid-auto-flow: column;
     }
