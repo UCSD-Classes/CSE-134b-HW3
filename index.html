@@ -131,6 +131,14 @@
         #aboutSection {
             border: 1px solid black;
         }
+
+        @media  screen and (max-width: 768px) {
+            #aboutSection {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+            
     </style>
 
     <!-- Work Section Style-->
@@ -156,6 +164,7 @@
                 align-items: center;
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(6, 1fr);
+                grid-gap: 1rem;
             }
         }
 
