@@ -3,20 +3,27 @@
     /* --primary-color: #F5E6D0; */
     --secondary-color: #382D01;
     --font-color: black;
+    --inverse-font-color: white;
     --alt-font-color: purple;
     --bg-color: #F5E6D0;
-    --heading-color: #D6D6DD;
+    --heading-color: black;
+    --link-color: #0000FF;
+
     
 }
+
+/* TODO Come up with primary color and secondary color */
 
 /* Dark Mode */
 [data-theme="dark"] {
     /* --primary-color: #0a192f; */
     --secondary-color: #c7d2fe;
     --font-color: white;
+    --inverse-font-color: black;
     --alt-font-color: purple;
     --bg-color: #0a192f;
-    --heading-color: #292922;
+    --heading-color: white;
+    --link-color: #0000FF;
     
 }
 
@@ -44,6 +51,7 @@ h1 {
 h2 {
     font-size: 2rem;
     text-decoration: underline;
+    color: var(--heading-color);
     
 }
 
@@ -64,6 +72,12 @@ h2 {
     padding: 0.5rem;
     border: 2px solid black;
     border-radius: 0.5rem;
+}
+
+#topNavigation ul li a {
+    text-decoration: underline;
+    color: var(--link-color);
+    box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
 }
 
 /*Simple css to style it like a toggle switch*/
@@ -154,9 +168,9 @@ footer ul {
 }
 
 footer a {
-    color: var(--alt-font-color);
+    color: var(--link-color);
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
     box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
 }
 
