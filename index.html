@@ -10,12 +10,16 @@
     <link href="assets/images/favicon.ico" rel="icon"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css" rel="stylesheet" >
+    <!--TODO Used for icons with javascript-->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css" rel="stylesheet" > -->
     <link href="styles/main.css" rel="stylesheet"/>
 
     <!-- Home Section Style-->
     <style>
+        #home {
+            margin-top: 2.5rem;
+        }
+        
         #homeCols {
             display: flex;
             flex-direction: column;
@@ -35,6 +39,12 @@
             align-items: center; 
         }
 
+        @media screen and (max-width: 1024px) {
+            #homeRows {
+                margin-left: 2rem;
+            }
+        }
+
         /* If the screen is 768px or less, remove the margin-left and make the grid 1 column */
         @media screen and (max-width: 768px) {
             #homeRows {
@@ -47,12 +57,11 @@
 
         #intro {
             margin-bottom: 6rem;
-            border: 3px solid red;
         }
 
         @media screen and (max-width: 768px) {
             #intro {
-                margin-bottom: 0;
+                margin-bottom: 2rem;
             }
         }
 
@@ -83,7 +92,7 @@
             padding-right: 2rem;
             display: flex;
             justify-content: center;
-            border-radius: 0.375rem;
+            border-radius: 6px;
             background-image: linear-gradient(90deg, #06B6D4 0%, #3B82F6 100%);
             cursor: pointer;
             border: 1px solid black;
@@ -98,23 +107,21 @@
             text-decoration: none;
         }
 
-        #me {
-            border: 3px solid green;
-        }
-
         #fractal {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 45vh;
-            height: 45vh;
-            border: 3px solid blue;
         }
 
         #fractalImg {
-            width: 40vh;
-            height: 40vh;
-            padding-left: 0.9rem;
+            width: 20vh;
+            height: 20vh;
+            margin-left: 1rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            #fractalImg {
+                width: 200px;
+                height: 200px;
+            }
         }
 
         .imgDesc {
@@ -129,7 +136,15 @@
     <!-- About Section Style-->
     <style>
         #aboutSection {
-            border: 1px solid black;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        #aboutDesc {
+            margin-left: 1rem;
+            font-size: 1.5rem;
+            text-align: left;
+            color: var(--font-color);
         }
 
         @media  screen and (max-width: 768px) {
@@ -214,17 +229,17 @@
         }
 
         .learnMore {
-            font-size:15px;
+            font-size: 1rem;
             font-family:Trebuchet MS;
             width:140px;
             height:50px;
             border-width:2px;
             color:#505739;
             border-color:#333029;
-            border-top-left-radius:15px;
-            border-top-right-radius:15px;
-            border-bottom-left-radius:15px;
-            border-bottom-right-radius:15px;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
             box-shadow: 0px 1px 0px 0px #1c1b18;
             text-shadow: 0px 1px 0px #ffffff;
             background:linear-gradient(#eae0c2, #ccc2a6);
@@ -281,10 +296,19 @@
             height: 10rem;
         }
 
+        @media screen and (max-width: 768px) {
+            #contactForm input {
+                width: 20rem;
+            }
+            #contactForm textarea {
+                width: 20rem;
+            }
+        }
+
         #contactForm button {
             min-width: 12rem;
             height: 3rem;
-            border-radius: 1.5rem;
+            border-radius: 24px;
             background: #57b846;
             font-weight: bold;
             line-height: 1.5;
@@ -304,6 +328,17 @@
             -moz-transition: all .4s;
             transition: all .4s;
         }
+
+        #contactForm button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #contactForm button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
     </style>
 
     <style>
@@ -339,7 +374,7 @@
             <ul id = navBarMenu>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="pages/labs.html">Labs</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
@@ -353,10 +388,6 @@
                     <script async src="scripts/theme.js"></script>
                 </li>
             </ul>
-
-            <div class = "navbarToggle">
-                <div class = "hamburgerMenu"></div>
-            </div>
         </nav>
     </header>
 
@@ -378,11 +409,17 @@
                         </section>
                     </figure>
                     <figure id="me">
-                        <img id="code" src="assets/images/portfolioPic.webp" alt="A headshot of me!"/>
+                        <picture id="headshot" alt="A headshot of me!">
+                            <source srcset="assets/images/portfolioPic.webp" type="image/webp">
+                            <img src="assets/images/portfolioPic.webp" alt="A headshot of me, a 20 year old Vietnamese male!">
+                        </picture>
                         <figcaption class="imgDesc">A picture of me!</figcaption>
                     </figure>
                     <figure id="fractal">
-                        <img id="fractalImg" src="assets/images/fractal.png" alt="A Mandelbrot fractal" width="200" height="200"/>
+                        <picture id="fractalImg" alt="A Mandelbrot fractal">
+                            <source srcset="assets/images/fractal.png" type="image/png">
+                            <img src="assets/images/fractal.png" alt="A Mandelbrot fractal, with a red background, black centers, and blue along the edges">
+                        </picture>
                         <figcaption class="imgDesc">Mandeltbrot fractal made in computer graphics!</figcaption>
                     </figure>
                 </div>
@@ -391,7 +428,7 @@
         
         <section class = "contentSection">
             <h2 id="about">About</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci doloribus porro quam doloremque maiores? Sunt tenetur, pariatur laboriosam labore ratione iste veritatis quam facilis expedita quod, perferendis qui voluptatibus soluta.</p>
+            <p id="aboutDesc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci doloribus porro quam doloremque maiores? Sunt tenetur, pariatur laboriosam labore ratione iste veritatis quam facilis expedita quod, perferendis qui voluptatibus soluta.</p>
             <p>The first line of code I wrote was <code>System.out.println("Hello World")</code>!</p>
             <section id = "Experience">
                 <h3>Experience</h3>
@@ -399,9 +436,9 @@
         </section>
         
         <section class = "contentSection">
-            <h2 id="work">Work</h2>
+            <h2 id="projects">Projects</h2>
             <p>
-                <strong>Check of some of my most recent work!</strong>
+                <strong>Check of some of my most recent projects!</strong>
             </p>
             <div id = "workContainer">
                 <div class = "background">
@@ -414,7 +451,7 @@
                                 ZooSeeker is an Android application that allows for users to plan out a day at the San Diego Zoo, complete with an optimized path through their selected exhibits.
                             </p>
                             <!-- <img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/> -->
-                            <button class = "learnMore" onclick="window.location.href='pages/projects/work1.html';">Learn More</button>
+                            <button class = "learnMore" onclick="window.location.href='pages/projects/project1.html';">Learn More</button>
                         </div>
                     </div>
                 </div>
@@ -428,7 +465,7 @@
                                 Learning from Health is a data science project, utilizing data from the CDC to create predictive models for income based on statistics on health conditions like diabetes, cholesterol, kidney disease, etc.
                             </p>
                             <!-- <img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/> -->
-                            <button class = "learnMore" onclick="window.location.href='pages/projects/work2.html';">Learn More</button>
+                            <button class = "learnMore" onclick="window.location.href='pages/projects/project2.html';">Learn More</button>
                         </div>
                     </div>
                 </div>
@@ -442,7 +479,7 @@
                                 An accessible platform/social application for crowdsourcing volunteers for humanitarian and art-based community efforts.
                             </p>
                             <!-- <img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/> -->
-                            <button class = "learnMore" onclick="window.location.href='pages/projects/work3.html';">Learn More</button>
+                            <button class = "learnMore" onclick="window.location.href='pages/projects/project3.html';">Learn More</button>
                         </div>
                     </div>
                 </div>
@@ -457,7 +494,7 @@
                                 Quisquam, quae.
                             </p>
                             <!-- <img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/> -->
-                            <button class = "learnMore" onclick="window.location.href='pages/projects/work4.html';">Learn More</button>
+                            <button class = "learnMore" onclick="window.location.href='pages/projects/project4.html';">Learn More</button>
                         </div>
                     </div>
                 </div>
@@ -472,7 +509,7 @@
                                 Quisquam, quae.
                             </p>
                             <!-- <img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/> -->
-                            <button class = "learnMore" onclick="window.location.href='pages/projects/work5.html';">Learn More</button>
+                            <button class = "learnMore" onclick="window.location.href='pages/projects/project5.html';">Learn More</button>
                         </div>
                     </div>
                 </div>
@@ -487,7 +524,7 @@
                                 Quisquam, quae.
                             </p>
                             <!-- <img src="assets/images/projects/code.png" alt="A placeholder image" width="200" height="200"/> -->
-                            <button class = "learnMore" onclick="window.location.href='pages/projects/work6.html';">Learn More</button>
+                            <button class = "learnMore" onclick="window.location.href='pages/projects/project6.html';">Learn More</button>
                         </div>
                     </div>
                 </div>
