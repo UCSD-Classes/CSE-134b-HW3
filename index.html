@@ -17,7 +17,7 @@
     <!-- Home Section Style-->
     <style>
         #home {
-            margin-top: 2.5rem;
+            visibility: hidden;
         }
         
         #homeCols {
@@ -31,10 +31,9 @@
         #homeRows {
             display: flex;
             flex-direction: row;
-            margin-left: 6rem;
+            margin-left: auto;
             margin-right: auto;
             max-width: 60rem;
-            align-items: center; 
         }
 
         @media screen and (max-width: 1024px) {
@@ -55,6 +54,7 @@
 
         #intro {
             margin-bottom: 6rem;
+            margin-right: 2rem;
         }
 
         @media screen and (max-width: 768px) {
@@ -66,7 +66,7 @@
         #introDesc {
             font-size: 2.5rem;
             font-weight: bold;
-            text-align: center;
+            text-align: left;
             color: var(--font-color);
         }
 
@@ -90,6 +90,8 @@
             padding-right: 2rem;
             display: flex;
             justify-content: center;
+            text-align: center;
+            font-size: 1rem;
             border-radius: 6px;
             background-image: linear-gradient(90deg, #06B6D4 0%, #3B82F6 100%);
             cursor: pointer;
@@ -104,9 +106,19 @@
             color: #fff;
             text-decoration: none;
         }
+        
+        #me {
+            height: -moz-max-content;
+            height: max-content;
+            margin-right: 1rem;
+        }
 
         #fractal {
             display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: -moz-max-content;
+            height: max-content;
         }
 
         #fractalImg {
@@ -168,6 +180,8 @@
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
             grid-gap: 2rem;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* If the screen is 768px or less, make the grid 1 column and reduce the margin-left */
@@ -192,7 +206,6 @@
             justify-content: center;
             min-width: 20rem;
             min-height: 15rem;
-            border: 3px solid red;
         }
 
         /* If the screen is 768px or less, lower the min-width */
@@ -205,6 +218,8 @@
         .projectTitle {
             margin-left: auto;
             margin-right: auto;
+            font-weight: bold;
+            font-size: 1.3rem;
         }
 
 
@@ -232,6 +247,7 @@
             width:140px;
             height:50px;
             border-width:2px;
+            cursor:pointer;
             color:#505739;
             border-color:#333029;
             border-top-left-radius: 1rem;
@@ -325,6 +341,7 @@
             -o-transition: all .4s;
             -moz-transition: all .4s;
             transition: all .4s;
+            cursor: pointer;
         }
 
         #contactForm button:hover {
@@ -415,8 +432,8 @@
                     </figure>
                     <figure id="fractal">
                         <picture id="fractalImg">
-                            <source srcset="assets/images/fractal.png" type="image/png">
-                            <img src="assets/images/fractal.png" alt="A Mandelbrot fractal, with a red background, black centers, and blue along the edges">
+                            <source srcset="assets/images/fractal.jpg" type="image/jpg">
+                            <img src="assets/images/fractal.jpg" alt="A Mandelbrot fractal, with a red background, black centers, and blue along the edges">
                         </picture>
                         <figcaption class="imgDesc">Mandeltbrot fractal made in computer graphics!</figcaption>
                     </figure>
