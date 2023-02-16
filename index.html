@@ -24,7 +24,6 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: screen;
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
         }
@@ -32,7 +31,6 @@
         #homeRows {
             display: flex;
             flex-direction: row;
-            height: screen;
             margin-left: 6rem;
             margin-right: auto;
             max-width: 60rem;
@@ -82,7 +80,7 @@
         }
 
         #resumeButton {
-            color: fff;
+            color: #fff;
             width: -moz-fit-content;
             width: fit-content;
             margin: auto;
@@ -409,14 +407,14 @@
                         </section>
                     </figure>
                     <figure id="me">
-                        <picture id="headshot" alt="A headshot of me!">
+                        <picture id="headshot">
                             <source srcset="assets/images/portfolioPic.webp" type="image/webp">
                             <img src="assets/images/portfolioPic.webp" alt="A headshot of me, a 20 year old Vietnamese male!">
                         </picture>
                         <figcaption class="imgDesc">A picture of me!</figcaption>
                     </figure>
                     <figure id="fractal">
-                        <picture id="fractalImg" alt="A Mandelbrot fractal">
+                        <picture id="fractalImg">
                             <source srcset="assets/images/fractal.png" type="image/png">
                             <img src="assets/images/fractal.png" alt="A Mandelbrot fractal, with a red background, black centers, and blue along the edges">
                         </picture>
@@ -534,7 +532,7 @@
     
     <section class="contentSection">
         <h2 id="contact">Contact</h2>
-        <form id="contactForm" action="mailto:" method="post" enctype="text/plain" required="">
+        <form id="contactForm" action="mailto:" method="post" enctype="text/plain" required>
             <span id = "formTitle">Get in Touch!</span>
 
             <label for="name">Name:</label>
@@ -544,7 +542,7 @@
             <input type="email" id="email" name="email" required placeholder="Your email..">
 
             <label for="email">Subject:</label>
-            <input type="subject" id="subject" name="subject" required placeholder="Subject..">
+            <input type="text" id="subject" name="subject" required placeholder="Subject..">
 
             <label for="message">Message:</label>
             <textarea id="message" name="message" required placeholder="Write something.."></textarea>
