@@ -218,6 +218,8 @@ footer section {
     display: flex;  
     flex-direction: column; 
     text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 footer ul {
