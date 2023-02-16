@@ -12,7 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!--TODO Used for icons with javascript-->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css" rel="stylesheet" > -->
-    <link href="styles/main.css" rel="stylesheet"/>
+    <!-- <link href="styles/main.css" rel="stylesheet"/> -->
+    <link rel="preload" href="styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="styles/main.css"></noscript>
 
     <!-- Home Section Style-->
     <style>
@@ -122,8 +124,6 @@
         }
 
         #fractalImg {
-            width: 20vh;
-            height: 20vh;
             margin-left: 1rem;
         }
 
@@ -135,9 +135,10 @@
         }
 
         .imgDesc {
-            font-size: 1rem;
+            font-size: 1.2rem;
             text-align: center;
             padding-left: 1rem;
+            font-family:'Courier New', Courier, monospace;
             color: var(--font-color);
         }
     </style>
@@ -425,14 +426,14 @@
                     <figure id="me">
                         <picture id="headshot">
                             <source srcset="assets/images/portfolioPic.webp" type="image/webp">
-                            <img src="assets/images/portfolioPic.webp" alt="A headshot of me, a 20 year old Vietnamese male!">
+                            <img src="assets/images/portfolioPic.webp" width="216" height="453" alt="A headshot of me, a 20 year old Vietnamese male!">
                         </picture>
                         <figcaption class="imgDesc">A picture of me!</figcaption>
                     </figure>
                     <figure id="fractal">
                         <picture id="fractalImg">
                             <source srcset="assets/images/fractal.jpg" type="image/jpg">
-                            <img src="assets/images/fractal.jpg" alt="A Mandelbrot fractal, with a red background, black centers, and blue along the edges">
+                            <img src="assets/images/fractal.jpg" width="400" height="400" alt="A Mandelbrot fractal, with a red background, black centers, and blue along the edges">
                         </picture>
                         <figcaption class="imgDesc">Mandeltbrot fractal made in computer graphics!</figcaption>
                     </figure>
