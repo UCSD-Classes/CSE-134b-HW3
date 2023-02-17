@@ -132,7 +132,7 @@ h2 {
   color: var(--font-color);
   background-color: var(--button1-color);
   border: 1px solid var(--font-color);
-  font-style: bold;
+  font-weight: bold;
   font-size: 1.25rem;
   padding: 10px 15px;
   border-radius: 75px;
@@ -222,7 +222,7 @@ footer ul {
 }
 
 @media screen and (min-width: 480px) {
-    footer:ul {
+    footer ul {
       grid-auto-flow: column;
     }
 }
