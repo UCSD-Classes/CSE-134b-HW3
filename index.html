@@ -21,8 +21,6 @@
         }
         
         #homeCols {
-            display: flex;
-            flex-direction: column;
             justify-content: center;
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
@@ -34,15 +32,7 @@
             }
         }
 
-        @media screen and (max-width: 768px) {
-            #homeRows {
-                margin-left: 0;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-
+    
         #homeRows {
             display: flex;
             flex-direction: row;
@@ -57,7 +47,6 @@
             }
         }
 
-        /* If the screen is 768px or less, remove the margin-left and make the grid 1 column */
         @media screen and (max-width: 768px) {
             #homeRows {
                 margin-left: 0;
@@ -159,31 +148,28 @@
         }
 
         #fractal {
-            display: block;
-            justify-content: center;
-            align-items: center;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
             height: -moz-max-content;
             height: max-content;
-        }
-
-        #fractalImg {
-            margin-left: 1rem;
+            width: 20rem;
         }
 
         @media screen and (max-width: 768px) {
-            #fractalImg {
-                width: 200px;
-                height: 200px;
-                margin-left: 0;
+            #fractal {
+                width: 15rem;
             }
         }
 
-        @media screen and (max-width: 375px) {
-            #fractalImg {
-                width: 150px;
-                height: 150px;
+        #fractalImg {
+            justify-content: center;
+            align-items: center; 
+        }
+
+        
+        @media screen and (max-width: 768px) {
+            #fractalImg img {
+                width: 90%;
+                height: 90%;
                 margin-left: 0;
             }
         }
@@ -195,16 +181,36 @@
             font-family:'Courier New', Courier, monospace;
             color: var(--font-color);
         }
+
+        @media screen and (max-width: 768px) {
+            .imgDesc {
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            .imgDesc {
+                text-align: left;
+            }
+        }
     </style>
     
 
     <!-- About Section Style-->
     <style>
         #aboutDesc {
+            text-indent: 2rem;
             margin-left: 1rem;
             font-size: 1.5rem;
             text-align: left;
             color: var(--font-color);
+        }
+
+        @media screen and (max-width: 375px) {
+            #aboutDesc {
+                font-size: 1rem;
+            }
         }
             
     </style>
@@ -217,6 +223,7 @@
             margin-bottom: 1rem;
             text-align: center;
         }
+        
         #workContainer {
             max-width: 66rem;
             display: grid;
@@ -230,6 +237,7 @@
         /* If the screen is 768px or less, make the grid 1 column and reduce the margin-left */
         @media screen and (max-width: 768px) {
             #workContainer {
+                max-width: 75%;
                 justify-content: center;
                 align-items: center;
                 grid-template-columns: 1fr;
@@ -318,13 +326,19 @@
             background: #fff;
             color: black;
             border-radius: 5px;
-            max-width: 30rem;
+            width: 30rem;
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 1rem;
             padding-top: 5px;
             padding-bottom: 5px;
             box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4); 
+        }
+
+        @media screen and (max-width: 375px) {
+            #contactForm {
+                width: 75%;
+            }
         }
 
         #formTitle {
@@ -358,10 +372,10 @@
 
         @media screen and (max-width: 768px) {
             #contactForm input {
-                width: 20rem;
+                width: 85%;
             }
             #contactForm textarea {
-                width: 20rem;
+                width: 85%;
             }
         }
 
@@ -479,7 +493,7 @@
                     <figure id="fractal">
                         <picture id="fractalImg">
                             <source srcset="assets/images/fractal.jpg" type="image/jpg">
-                            <img src="assets/images/fractal.jpg" width="400" height="400" alt="A Mandelbrot fractal, with a red background, black centers, and blue along the edges">
+                            <img src="assets/images/fractal.jpg" width="300" height="300" alt="A Mandelbrot fractal, with a red background, black centers, and blue along the edges">
                         </picture>
                         <figcaption class="imgDesc">Mandeltbrot fractal made in computer graphics!</figcaption>
                     </figure>
