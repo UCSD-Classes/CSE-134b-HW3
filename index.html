@@ -147,13 +147,17 @@
             margin-right: 1rem;
         }
 
-
-
         #fractal {
             margin: 0 auto;
             height: -moz-max-content;
             height: max-content;
             width: 20rem;
+        }
+
+        @media screen and (max-width: 1024px) {
+            #fractal {
+                width: 18rem;
+            }
         }
 
         @media screen and (max-width: 768px) {
@@ -510,7 +514,7 @@
                             <source srcset="assets/images/fractal.jpg" type="image/jpg">
                             <img src="assets/images/fractal.jpg" width="300" height="300" alt="A Mandelbrot fractal, with a red background, black centers, and blue along the edges">
                         </picture>
-                        <figcaption class="imgDesc">Mandeltbrot fractal made in computer graphics!</figcaption>
+                        <figcaption class="imgDesc">Mandelbrot fractal made in computer graphics!</figcaption>
                     </figure>
                 </div>
             </div>
