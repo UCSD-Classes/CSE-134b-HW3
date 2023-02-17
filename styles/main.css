@@ -1,8 +1,5 @@
-/* TODO Come up with primary color and secondary color */
 
 /* Light Mode */
-/* https://coolors.co/palette/94707e-c2a0af-99ad8f-eddfc9-f5e6d0 */
-/* https://coolors.co/palette/d5ee00-241456-e75208-b5c1bf-f5e6d0 */
 :root {
   --bg-color: #F5E6D0;
   --font-color: black;
@@ -17,7 +14,6 @@
 }
 
 /* Dark Mode */
-/* https://coolors.co/palette/0a192f-172a46-64fcda-087e8b-c4ceed-77809a*/
 [data-theme="dark"] {
   --bg-color: #0a192f;
   --font-color: #D1DFF5;
@@ -189,8 +185,8 @@ h2 {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 1.625rem;
+  width: 1.625rem;
   left: 4px;
   bottom: 4px;
   background-color: white;
