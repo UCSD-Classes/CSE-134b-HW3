@@ -28,6 +28,21 @@
             margin-bottom: 0.5rem;
         }
 
+        @media screen and (max-width: 1024px) {
+            #homeCols {
+                margin-left: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            #homeRows {
+                margin-left: 0;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
         #homeRows {
             display: flex;
             flex-direction: row;
@@ -63,11 +78,31 @@
             }
         }
 
+        @media screen and (max-width: 375px) {
+            #intro {
+                margin-bottom: 1rem;
+            }
+        }
+
         #introDesc {
             font-size: 2.5rem;
             font-weight: bold;
             text-align: left;
             color: var(--font-color);
+        }
+
+        @media screen and (max-width: 768px) {
+            #introDesc {
+                font-size: 2rem;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            #introDesc {
+                font-size: 1.5rem;
+                text-align: center;
+            }
         }
 
         #introDesc2 {
@@ -79,7 +114,19 @@
             color: var(--font-color);
         }
 
+        @media screen and (max-width: 768px) {
+            #introDesc2 {
+                font-size: 0.9rem;
+                text-align: center;
+            }
+        }
+
         #resumeButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
             color: #fff;
             width: -moz-fit-content;
             width: fit-content;
@@ -88,14 +135,12 @@
             padding-bottom: 1rem;
             padding-left: 2rem;
             padding-right: 2rem;
-            display: flex;
-            justify-content: center;
-            text-align: center;
             font-size: 1rem;
             border-radius: 6px;
-            background-image: linear-gradient(90deg, #06B6D4 0%, #3B82F6 100%);
-            cursor: pointer;
             border: 1px solid black;
+            background-image: linear-gradient(90deg, #06B6D4 0%, #3B82F6 100%);
+            
+            
         }
 
         #resumeButton:hover {
@@ -155,23 +200,11 @@
 
     <!-- About Section Style-->
     <style>
-        #aboutSection {
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-        }
-
         #aboutDesc {
             margin-left: 1rem;
             font-size: 1.5rem;
             text-align: left;
             color: var(--font-color);
-        }
-
-        @media  screen and (max-width: 768px) {
-            #aboutSection {
-                padding-top: 0;
-                padding-bottom: 0;
-            }
         }
             
     </style>
@@ -182,6 +215,7 @@
             padding-top: 1.5rem;
             padding-bottom: 1.5rem;
             font-size: 1.5rem;
+            margin-left: 1rem;
         }
         #workContainer {
             max-width: 66rem;
@@ -202,11 +236,19 @@
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(6, 1fr);
                 grid-gap: 1rem;
+                padding: 0rem;
+                padding-bottom: 2rem;
             }
         }
 
         .background {
             background-color: var(--font-color);
+        }
+
+        p strong {
+            font-size: 1.5rem;
+            margin-left: 1rem;
+            text-align: center;
         }
 
         .projectContainer {
@@ -284,6 +326,7 @@
             max-width: 30rem;
             margin-left: auto;
             margin-right: auto;
+            margin-bottom: 1rem;
             padding-top: 5px;
             padding-bottom: 5px;
             box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4); 
